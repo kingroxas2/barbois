@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+<head> <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="images/favicon.png" type="image/ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbois</title>
+    
+	</head>
+<body>
+
+<title>Barbois</title>
+ <link rel="stylesheet" href="style.css">
+ <section class="header">
+          <nav>
+		      <a href="home.html"><img class="logo" src="images/logo.png"></a>
+              <div class="nav-links">
+                  <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="program.html">WORKOUT PROGRAMS</a></li>
+                    <li><a href="equipment.html">EQUIPMENTS</a></li>
+                    <li><a href="trainarea.html">TRAINING AREAS</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                 </ul>
+            </div>
+        </nav>
+    <div class="text-box">
+        <h1>WELCOME TO BARBOIS</h1>
+    </div>
+</section>
+<div class="intro">
+<h2>What is BarBois?</h2>
+
+<p>BarBois, is an organization that focuses on maintaining the health and well-being of an individual through calisthenics.
+ It is a term that associates exercises using only body weight and the environment around us to perform basic compound exercises like push-ups, pull-ups, dips or squats.
+ Compared to heavy weight exercise, calisthenics are way cheaper and available almost all the time. People can still do their workouts anywhere either at the park, the beach or even at home, as long as they have the right knowledge and equipment to achieve their desired goals in fitness. </p>
+
+<h3>Still confuse about calisthenics?<br> Learn more about calisthenics from this video</h3>
+</div>
+<div class="video">
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/VLOKMjHEyhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+</div>
+<section class="footer">
+     <div class="container">
+        <div class="row">
+            <div class="footer-text">
+                 <h4>How can I exercise without going to the gym?</h4>
+                 <p class="animate-text">
+                    <span>hate to go gym but still want to get fit?</span>
+                    <span>come and join us</span>
+                    <span>no need to pay more</span>
+                    <span>you can workout from your home</span>
+                    <span>Learn from BarBois</span>
+                 </p>
+				 
+            </div>
+        </div>
+     </div>
+ </section>
+ 
+    <!--footer--->
+      <section class="footer2">
+        <h4 color="white">About Us</h4>
+        <p class="footer2">We're just people who wanna show our muscles <br> to the public while helping others who has the same goals!</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+
+        </div>
+        </div>
+    </section>
+
+<script> 
+      const txts=document.querySelector(".animate-text").children,
+               txtsLen=txts.length;
+           let index=0;
+          const textInTimer=3000,
+                textOutTimer=2800;
+
+         function animateText() {
+            for(let i=0; i<txtsLen; i++){
+              txts[i].classList.remove("text-in","text-out");  
+            }
+            txts[index].classList.add("text-in");
+
+            setTimeout(function(){
+                txts[index].classList.add("text-out");              
+            },textOutTimer)
+
+            setTimeout(function(){
+
+              if(index == txtsLen-1){
+                  index=0;
+                }
+               else{
+                   index++;
+                 }
+                animateText();
+            },textInTimer); 
+         }
+         
+         window.onload=animateText;
+</script>
+</body>
+</html>
